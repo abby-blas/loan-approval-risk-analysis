@@ -1,4 +1,4 @@
-# Loan Approval Classification Analysis
+# Loan Approval Decision Support Analysis
 
 ## Overview
 This project explores how classification models can support loan approval decisions by balancing predictive performance, interpretability, and financial risk. Rather than automating approvals, the analysis focuses on understanding model tradeoffs and how predictions could be used to inform real-world decision-making.
