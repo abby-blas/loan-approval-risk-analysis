@@ -13,6 +13,7 @@ Key preprocessing steps include:
 - Handling missing values
 - Encoding categorical variables
 - Defining features (X) from the target variable (y)
+- Standardized feature scales using MinMaxScaler for logistic regression
 
 ## Modeling Approach
 
@@ -25,10 +26,10 @@ Two classification models were evaluated:
 Model evaluation emphasized error tradeoffs rather than accuracy alone, with particular attention to the financial impact of false approvals versus false rejections. In addition to standard model evaluation metrics, the analysis includes a cost-sensitive decision threshold assessment. This approach examines how adjusting probability thresholds affects approval rates and error tradeoffs when false approvals are treated as more costly than false rejections.
 
 ## Key Findings
-- Logistic regression produced higher approval rates, resulting in fewer false rejections but more false approvals.
-- The Random Forest model reduced false approvals, indicating stronger risk control, but rejected more qualified applicants.
+- The Random Forest model reduced false rejections and increased true approvals, resulting in more revenue for the lender by identifying more qualified applicants.
+- Logistic regression produced lower approval rates, resulting in more false rejections and less true approvals.
 - These results highlight a common tradeoff in credit risk modeling between customer experience and financial risk mitigation.
-- Cost-sensitive threshold analysis showed that the Random Forest model allowed for greater control over financial risk through threshold tuning, while logistic regression was less responsive to threshold changes.
+- Cost-sensitive threshold analysis showed that the Random Forest model allowed for greater control over financial risk through threshold tuning, while logistic regression was more sensitive to threshold changes (sharp fall in approval rates).
 
 ## Practical Application
 
